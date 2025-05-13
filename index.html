@@ -25,8 +25,8 @@
     <img src="logo.png" alt="My Logo" class="logo">
     <div class="nav-buttons">
       <button onclick="blinkAboutSection()">ABOUT US</button>
-      <button onclick="alert('MEN AT WORK')">PRODUCTS</button>
-      <button onclick="alert('MEN AT WORK')">CONTACT US</button>
+      <button onclick="scrollToProducts()">PRODUCTS</button>
+      <button onclick="scrolltocontact()">CONTACT US</button>
     </div>
   </div>
 
@@ -44,14 +44,82 @@
   </P>
   </div>
 
+  <!-- INDUSTRIES SECTION -->
+<div class="industries-section">
+  <h2 class="industries-heading">INDUSTRIES</h2>
+  <p class="industries-description">
+    We proudly serve a wide range of industries such as retail, hospitality, healthcare, food & beverage, and more — delivering custom POS hardware and display solutions tailored to your needs.
+  </p>
+  <!--industries image section-->
+</div>
+
+<div class="industries-gallery">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="industry1.jpg" alt="Retail">
+      </div>
+      <div class="flip-card-back">
+        <div class="card-back-content"></div>
+        <h3>Retail</h3>
+        <p>Hypermarket/Supermarket/Retail chain-stores
+          Convenience Stores
+          Fruit Store & Greengroceries
+          Meat and Fisheries
+          Bakery
+          + and mor</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="industry2.jpg" alt="Open Market">
+      </div>
+      <div class="flip-card-back">
+        <h3>Open Market</h3>
+        <p>Food Truck
+          Street vendor
+          + and more</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="industry3.jpg" alt="Hospitality">
+      </div>
+      <div class="flip-card-back">
+        <h3>Hospitality</h3>
+        <p>Restaurant/Food Court
+          Fast Food
+          + and more</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <!-- PRODUCTS SECTION -->
-  <a href="page1.html"><i class="fa-solid fa-desktop"></i></a>
-    <h2 class="products-heading">PRODUCTS</h2>
+  
+  <h2 id="products-section" class="products-heading">PRODUCTS</h2>
 
     <div class="icon-links">
       <a href="page1.html"><i class="fa-solid fa-desktop"></i></a>
-    </div>    
-    
+    </div>   
+  <!--related products section--> 
+    <h2 class="related-products-heading">RELATED PRODUCTS</h2>
+    <div class="related-products-icons">
+      <div class="product-icons">
+        <img src="icons/scales.png" alt="scales" class="product-icon">
+        <img src="icons/printer.png" alt="printer" class="product-icon">
+        <img src="icons/scanner.png" alt="scanner" class="product-icon">
+        <img src="icons/paper.png" alt="paper" class="product-icon">
+      </div>
+    </div>
+
     <div class="black-screen">
       <img src="logo.png" alt="Company Logo" class="company-logo">
 
@@ -61,7 +129,8 @@
         <a href="#products-section">PRODUCTS</a>
 
       </div>
-    </div>
+    
+  </div>
     
   <!-- JS -->
   <script>
@@ -73,6 +142,29 @@
       }, 1000);
     }
   </script>
+
+  <script>
+    function blinkAboutSection() {
+      const section = document.getElementById("about-section");
+      
+      // Scroll smoothly to the section
+      section.scrollIntoView({ behavior: "smooth" });
+  
+      // Optional: Add a blinking effect
+      section.classList.add("blink-effect");
+      setTimeout(() => {
+        section.classList.remove("blink-effect");
+      }, 1000);
+    }
+  </script>
+  
+  <script>
+    function scrollToProducts() {
+      const section = document.getElementById("products-section");
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+  
 
   <script src="script.js"></script>
 </body>
